@@ -1,5 +1,4 @@
-from weibo import weibo_service
+from util import aiohttp_util
+from weibo.weibo_service import main
 
-
-res = weibo_service.search("cicc")
-weibo_service.save(res, "./csv/weibo")
+aiohttp_util.run(main())
