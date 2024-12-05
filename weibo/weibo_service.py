@@ -49,6 +49,7 @@ def process_mblog(card: dict):
         "created_at": date_util.to_datetime(mblog["created_at"], MBLOG_DATE_PATTERN),
     }
     
+
 def process_result(cards: List[dict]):
     res = []
     for card in cards:
