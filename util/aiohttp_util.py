@@ -15,13 +15,13 @@ async def _requests(session: ClientSession,
         async with session.get(url=url, params=params, headers=headers) as resp:
             return await resp.json()
     if method == "post":
-        async with session.get(url=url, json=json, data=data, headers=headers) as resp:
+        async with session.post(url=url, json=json, data=data, headers=headers) as resp:
             return await resp.json()
     if method == "put":
-        async with session.get(url=url, json=json, data=data, headers=headers) as resp:
+        async with session.put(url=url, json=json, data=data, headers=headers) as resp:
             return await resp.json()
     if method == "delete":
-        async with session.get(url=url, params=params, headers=headers) as resp:
+        async with session.delete(url=url, params=params, headers=headers) as resp:
             return await resp.json()
     raise ValueError(f"Unsupported method: {method}")
 

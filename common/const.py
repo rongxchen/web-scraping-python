@@ -6,3 +6,6 @@ HTTP_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/5
 WEIBO_SEARCH_URL = "https://m.weibo.cn/api/container/getIndex?"
 
 
+# youdao
+YOUDAO_TRANSLATE_SUGGEST_URL = "https://dict.youdao.com/suggest?"
+YOUDAO_TRANSLATE_ONE_URL = "https://dict.youdao.com/jsonapi_s?"
