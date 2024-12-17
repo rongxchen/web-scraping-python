@@ -27,6 +27,8 @@ def process_douban_250_one_page(html_str: str):
                 year, location, categories = descriptions
             elif len(descriptions) == 4:
                 year, location, categories = " ".join(descriptions[:2]), descriptions[2], descriptions[3]
+            else:
+                year, location, categories = "", "", ""
             res.append({
                 "movie_url": movie_url,
                 "img_url": img_url,

@@ -21,7 +21,6 @@ async def get_douban_250():
         tasks = [get_douban_250_one_page(session, page) for page in range(1, 11)]
         res = await aiohttp_util.gather_tasks(tasks)
         for r in res:
-            print(r)
             if r is None or not isinstance(r, str):
                 continue
             lst.extend(douban_util.process_douban_250_one_page(r))
