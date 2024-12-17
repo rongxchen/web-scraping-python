@@ -31,9 +31,7 @@ async def search_one_page(session: ClientSession, keyword: str, page: int):
 async def search(keyword: str, page_count: int = 1):
     lst = []
     async with aiohttp_util.get_session() as session:
-        tasks = [
-            search_one_page(session, keyword, page)
-        for page in range(1, page_count+1)]
+        tasks = [search_one_page(session, keyword, page) for page in range(1, page_count+1)]
         res = await aiohttp_util.gather_tasks(tasks)
         for r in res:
             if r is None or not isinstance(r, dict):

@@ -9,3 +9,7 @@ WEIBO_SEARCH_URL = "https://m.weibo.cn/api/container/getIndex?"
 # youdao
 YOUDAO_TRANSLATE_SUGGEST_URL = "https://dict.youdao.com/suggest?"
 YOUDAO_TRANSLATE_ONE_URL = "https://dict.youdao.com/jsonapi_s?"
+
+
+# douban
+DOUBAN_250_URL = "https://movie.douban.com/top250?"
